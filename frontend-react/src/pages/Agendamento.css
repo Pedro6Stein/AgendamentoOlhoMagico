@@ -1,0 +1,125 @@
+/* /frontend-react/src/pages/Agendamento.css */
+
+/* Cores do Tema Olho Mágico */
+:root {
+    --amarelo-principal: #ffc107;
+    --preto-secundario: #000;
+    --cinza-fundo: #f7f7f7;
+    --sombra-card: rgba(0, 0, 0, 0.1);
+}
+
+.agendamento-container {
+    max-width: 550px; /* Um pouco maior para desktop */
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px var(--sombra-card);
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #eee; /* Borda leve */
+}
+
+.agendamento-header {
+    text-align: center;
+    color: var(--preto-secundario);
+    border-bottom: 3px solid var(--amarelo-principal);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.agendamento-subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.agendamento-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--amarelo-principal);
+    padding-left: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.agendamento-input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.agendamento-input:focus {
+    border-color: var(--amarelo-principal);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3);
+    outline: none;
+}
+
+.agendamento-button {
+    padding: 15px;
+    background-color: var(--amarelo-principal);
+    color: var(--preto-secundario);
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+    margin-top: 20px;
+}
+.agendamento-button:hover:not(:disabled) {
+    background-color: #e0b400; /* Amarelo um pouco mais escuro no hover */
+}
+.agendamento-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.message-success {
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid lightgreen;
+    background-color: #e6ffe6;
+    border-radius: 4px;
+}
+
+.message-error {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ffcccc;
+    background-color: #ffe6e6;
+    border-radius: 4px;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 600px) {
+    .agendamento-container {
+        max-width: 100%;
+        margin: 0;
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .agendamento-header {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .agendamento-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
